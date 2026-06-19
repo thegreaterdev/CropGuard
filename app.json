@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "CropGuard",
+    "slug": "cropguard",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "cropguard",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Used to capture plant images for disease detection.",
+        "NSPhotoLibraryUsageDescription": "Used to select plant images from your library."
+      }
+    },
+    "android": {
+      "usesCleartextTraffic": true,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#15803d"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "package": "com.thegreaterdev.cropguard"
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+  "expo-router",
+  "expo-camera",
+  "expo-image-picker",
+  [
+    "expo-splash-screen",
+    {
+      "image": "./assets/images/icon.png",
+      "imageWidth": 240,
+      "resizeMode": "contain",
+      "backgroundColor": "#15803d"
+    }
+  ],
+  [
+    "expo-build-properties",
+    {
+      "android": {
+        "usesCleartextTraffic": true
+      }
+    }
+  ]
+],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "6c086b28-feb1-424b-ad63-7f40ea7a1246"
+      }
+    }
+  }
+}
